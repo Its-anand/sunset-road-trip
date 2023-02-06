@@ -20,6 +20,24 @@
                 top: 100%;
             }
         }
+        @keyframes pollLeftAnim {
+            from {
+                left: 50%;
+            }
+
+            to {
+                left:0%;
+            }
+        }
+        @keyframes pollRightAnim {
+            from {
+                right: 50%;
+            }
+
+            to {
+                right:0%;
+            }
+        }
 
         body {
             margin: 0;
@@ -57,12 +75,10 @@
 
 
         .land {
-            background: #22111B;
             height: 40vh;
             position: absolute;
             bottom: -10px;
             overflow: hidden;
-
         }
 
         .road {
@@ -78,6 +94,7 @@
 
         .line {
             background: #fff;
+
             width: 80%;
             height: 100%;
             clip-path: polygon(49% 0, 51% 0, 100% 100%, 0% 100%);
@@ -107,14 +124,16 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
-        .whiteBlock {
-            background-color: #fff;
+.roadBlocks{
+    background-color: #fff;
             width: 2rem;
             height: 3rem;
             position: absolute;
-            animation: BlockAnim 0.3s linear infinite;
-        }
+
+}
+        .whiteBlock1 {animation: BlockAnim 0.4s linear infinite;}
+        .whiteBlock2 {animation: BlockAnim 0.4s linear 1s infinite;}
+        
         .mountains{
     width: 100%;
     height: 27rem;
@@ -122,14 +141,39 @@
     bottom: 34vh;
         }
         .hills{
-            background-color: #3b1006;
             clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
             position: absolute;
             bottom: 0px;
         }
-        .hill1{width: 90%; height: 16rem; left: -15%;}
-        .hill2{width: 85%; height: 25rem; left: 33%;}
+        .hill1{width: 90%; height: 16rem; left: -15%; background-color: #5b271c;}
+        .hill2{width: 85%; height: 25rem; left: 33%; background-color: #3b1006;}
+ .poll{
+    width: 10px;
+    height: 13rem;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 7px 0px #fff9c2;
 
+    position: absolute;
+    border-radius: 15px;
+}
+.polLeft1{animation: pollLeftAnim .8s linear infinite;}
+.polRight1{animation: pollRightAnim .8s linear infinite;}
+.polLeft2{animation: pollLeftAnim .8s linear 1s infinite;}
+.polRight2{animation: pollRightAnim .8s linear 1s infinite;}
+.polLeft3{animation: pollLeftAnim .8s linear 2s infinite;}
+.polRight3{animation: pollRightAnim .8s linear 2s infinite;}
+.polLeft4{animation: pollLeftAnim .8s linear 3s infinite;}
+.polRight4{animation: pollRightAnim .8s linear 3s infinite;} 
+.car{
+    width: 15rem;
+    height: 16rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background: #0F5E9C;
+    z-index: 11;
+}
     </style>
 </head>
 
@@ -143,13 +187,28 @@
     <section class="mountains">
         <div class="hill1 hills"></div>
         <div class="hill2 hills"></div>
+        <div class="car"></div>
+
     </section>
     <section class="land">
+
+        <section class="polLeft1 poll"></section>
+        <section class="polLeft2 poll"></section>
+        <section class="polLeft3 poll"></section>
+        <section class="polLeft4 poll"></section>
+
+        <section class="polRight1 poll"></section>
+        <section class="polRight2 poll"></section>
+        <section class="polRight3 poll"></section>
+        <section class="polRight4 poll"></section> 
         <div class="road">
+
             <div class="line">
                 <div class="centralRoad">
                     <div class="centreLine">
-                        <div class="whiteBlock"></div>
+                        <div class="whiteBlock1 roadBlocks"></div>
+                        <div class="whiteBlock2 roadBlocks"></div>
+
                     </div>
                 </div>
             </div>

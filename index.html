@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --closeColor: #3b1006;
+        }
+
+        body {
+            margin: 0;
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        .sky,
+        .land {
+            width: 100%;
+        }
+
+        .sky {
+            background-color: #88BEE4;
+            height: 100vh;
+            background-image: linear-gradient(#FE602F, #FD9F32, #FE602F);
+            z-index: -1;
+        }
+
+        .sun2 {
+
+            width: 150px;
+            height: 150px;
+            border-radius: 50% 50% 20% 20% / 50% 50% 50% 50%;
+            /* box-shadow:inset 1px -20px 39px 30px #ec9600; */
+            box-shadow: 0px 224px 368px 325px #EF7D24;
+            background-color: #fff1c2;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sun {
+
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            /* box-shadow:inset 1px -20px 39px 30px #ec9600; */
+            box-shadow: 0px 1px 76px 114px #ef7d24;
+            background-color: #FFF9C2;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+
+        .land {
+            background: rgb(189, 91, 0);
+            height: 40vh;
+            position: absolute;
+            bottom: -10px;
+            overflow: hidden;
+
+        }
+
+        .road {
+            background: #000;
+            width: 130%;
+            height: 100%;
+            clip-path: polygon(49% 0, 51% 0, 100% 100%, 0% 100%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .line {
+            background: #fff;
+            width: 80%;
+            height: 100%;
+            clip-path: polygon(49% 0, 51% 0, 100% 100%, 0% 100%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centralRoad {
+            background: #000;
+            width: 94%;
+            height: 100%;
+            clip-path: polygon(49% 0, 51% 0, 100% 100%, 0% 100%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .centreLine {
+            background: #000;
+            width: 2%;
+            height: 100%;
+            clip-path: polygon(49% 0, 51% 0, 100% 100%, 0% 100%);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column; */
+
+        }
+
+        @keyframes BlockAnim {
+            from {
+                top: 0%;
+            }
+
+            to {
+                top: 100%;
+            }
+        }
+        @keyframes BlockAnim1 {
+            from {
+                top: 30%;
+            }
+
+            to {
+                top: 100%;
+            }
+        }
+
+
+        .whiteBlock {
+            background-color: #fff;
+            width: 2rem;
+            height: 3rem;
+            position: absolute;
+            
+        }
+        .lineBlock1{animation: BlockAnim 0.3s linear infinite;}
+
+        
+    </style>
+</head>
+
+<body>
+
+
+
+    <section class="sky">
+        <section class="sun2"></section>
+        <section class="sun"></section>
+
+    </section>
+    <section class="land">
+        <div class="road">
+            <div class="line">
+                <div class="centralRoad">
+                    <div class="centreLine">
+                        <div class="lineBlock1 whiteBlock"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+</body>
+
+</html>

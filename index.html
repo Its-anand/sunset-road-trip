@@ -181,7 +181,6 @@
             width: 10px;
             height: 13rem;
             background-image: linear-gradient(to right, #070707, #ac5000, #ac5000, #050505);
-
             position: absolute;
             border-radius: 15px;
 
@@ -360,7 +359,20 @@
             position: absolute;
             bottom: 0px;
         }
-
+.carBottomLight{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #B10807;
+    position: absolute;
+            bottom: 7px;
+}
+.carBottomLeftLight{
+    left: 1rem;
+}
+.carBottomRightLight{
+    right: 1rem;
+}
     </style>
 </head>
 
@@ -381,9 +393,14 @@
             <section class="carBackLight carBackLightLeft"></section>
             <section class="carBackLight carBackLightRight"></section>
             <section class="carBoot"></section>
-            <section class="carBootBottom"></section>
+            <section class="carBootBottom">
+                <div class="carBottomLight carBottomLeftLight"></div>
+                <div class="carBottomLight carBottomRightLight"></div>
+            </section>
             <div class="carBackDoor">
-                <div class="carBackDoorBottom"></div>
+                <div class="carBackDoorBottom">
+
+                </div>
 
             </div>
             <section class="wheel leftWheel">

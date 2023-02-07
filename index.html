@@ -73,7 +73,6 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            box-shadow: -3px -9px 14px 9px #fff9c2;
             background-color: #FFF9C2;
             position: absolute;
             top: 47%;
@@ -285,7 +284,7 @@
 
         }
 
-        .rearMirror {
+        .carMirror {
             width: 80%;
             height: 30%;
             background: #b1e5e9;
@@ -296,7 +295,7 @@
             border-radius: 30%;
         }
 
-        .carBackLight {
+        .carLightTop {
             width: 2.5rem;
             height: 2.5rem;
             background-color: #B10807;
@@ -318,13 +317,13 @@
             bottom: 0px;
         }
 
-        .carBackLightLeft {
+        .carLightTopLeft {
             top: 52%;
             left: 0.4rem;
             transform: rotate(17deg);
         }
 
-        .carBackLightRight {
+        .carLightTopRight {
             top: 52%;
             left: 12rem;
             transform: rotate(346deg);
@@ -345,13 +344,13 @@
         .carBackDoorBottom {
             clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%);
             width: 100%;
-            height: 60%;
+            height: 62%;
             background: #7f3605;
             position: absolute;
             bottom: 0px;
         }
 
-        .carBootBottom {
+        .carBootShadowEffect {
             width: 99%;
             height: 34%;
             background: #b34c08;
@@ -389,11 +388,11 @@
 
         <div class="car">
             <section class="upperBody"></section>
-            <section class="rearMirror"></section>
-            <section class="carBackLight carBackLightLeft"></section>
-            <section class="carBackLight carBackLightRight"></section>
+            <section class="carMirror"></section>
+            <section class="carLightTop carLightTopLeft"></section>
+            <section class="carLightTop carLightTopRight"></section>
             <section class="carBoot"></section>
-            <section class="carBootBottom">
+            <section class="carBootShadowEffect">
                 <div class="carBottomLight carBottomLeftLight"></div>
                 <div class="carBottomLight carBottomRightLight"></div>
             </section>

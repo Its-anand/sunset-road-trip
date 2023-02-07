@@ -20,22 +20,31 @@
                 top: 100%;
             }
         }
+
         @keyframes pollLeftAnim {
             from {
                 left: 50%;
+                opacity: 0.5;
             }
 
             to {
-                left:0%;
+                left: 0%;
+                opacity: 1;
+
             }
         }
+
         @keyframes pollRightAnim {
             from {
                 right: 50%;
+                opacity: 0.5;
+
             }
 
             to {
-                right:0%;
+                right: 0%;
+                opacity: 1;
+
             }
         }
 
@@ -82,7 +91,7 @@
         }
 
         .road {
-            background: #000;
+            background: rgb(11, 11, 11);
             width: 130%;
             height: 100%;
             clip-path: polygon(49% 0, 51% 0, 100% 100%, 0% 100%);
@@ -105,7 +114,7 @@
         }
 
         .centralRoad {
-            background: #000;
+            background: rgb(16, 16, 16);
             width: 94%;
             height: 100%;
             clip-path: polygon(49% 0, 51% 0, 100% 100%, 0% 100%);
@@ -124,56 +133,234 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-.roadBlocks{
-    background-color: #fff;
+
+        .roadBlocks {
+            background-color: #fff;
             width: 2rem;
             height: 3rem;
             position: absolute;
 
-}
-        .whiteBlock1 {animation: BlockAnim 0.4s linear infinite;}
-        .whiteBlock2 {animation: BlockAnim 0.4s linear 1s infinite;}
-        
-        .mountains{
-    width: 100%;
-    height: 27rem;
-    position: absolute;
-    bottom: 34vh;
         }
-        .hills{
+
+        .whiteBlock1 {
+            animation: BlockAnim 0.4s linear infinite;
+        }
+
+        .whiteBlock2 {
+            animation: BlockAnim 0.4s linear 1s infinite;
+        }
+
+        .mountains {
+            width: 100%;
+            height: 27rem;
+            position: absolute;
+            bottom: 34vh;
+        }
+
+        .hills {
             clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
             position: absolute;
             bottom: 0px;
         }
-        .hill1{width: 90%; height: 16rem; left: -15%; background-color: #5b271c;}
-        .hill2{width: 85%; height: 25rem; left: 33%; background-color: #3b1006;}
- .poll{
-    width: 10px;
-    height: 13rem;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 7px 0px #fff9c2;
 
-    position: absolute;
-    border-radius: 15px;
-}
-.polLeft1{animation: pollLeftAnim .8s linear infinite;}
-.polRight1{animation: pollRightAnim .8s linear infinite;}
-.polLeft2{animation: pollLeftAnim .8s linear 1s infinite;}
-.polRight2{animation: pollRightAnim .8s linear 1s infinite;}
-.polLeft3{animation: pollLeftAnim .8s linear 2s infinite;}
-.polRight3{animation: pollRightAnim .8s linear 2s infinite;}
-.polLeft4{animation: pollLeftAnim .8s linear 3s infinite;}
-.polRight4{animation: pollRightAnim .8s linear 3s infinite;} 
-.car{
-    width: 15rem;
-    height: 16rem;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    background: #0F5E9C;
-    z-index: 11;
-}
+        .hill1 {
+            width: 90%;
+            height: 16rem;
+            left: -15%;
+            background-color: #5b271c;
+        }
+
+        .hill2 {
+            width: 85%;
+            height: 25rem;
+            left: 33%;
+            background-color: #3b1006;
+        }
+
+        .poll {
+            width: 10px;
+            height: 13rem;
+            background-image: linear-gradient(to right, #070707, #ac5000, #ac5000, #050505);
+
+            position: absolute;
+            border-radius: 15px;
+
+        }
+
+        .polLeft1 {
+            animation: pollLeftAnim .8s linear infinite;
+            top: 1rem;
+
+        }
+
+        .polRight1 {
+            animation: pollRightAnim .8s linear infinite;
+            top: 1rem;
+
+        }
+
+        .polLeft2 {
+            animation: pollLeftAnim .8s linear 1s infinite;
+        }
+
+        .polRight2 {
+            animation: pollRightAnim .8s linear 1s infinite;
+        }
+
+        .polLeft3 {
+            animation: pollLeftAnim .8s linear 2s infinite;
+            top: 1rem;
+
+        }
+
+        .polRight3 {
+            animation: pollRightAnim .8s linear 2s infinite;
+            top: 1rem;
+
+        }
+
+        .polLeft4 {
+            animation: pollLeftAnim .8s linear 3s infinite;
+        }
+
+        .polRight4 {
+            animation: pollRightAnim .8s linear 3s infinite;
+        }
+
+        .car {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            z-index: 1;
+            width: 15rem;
+            height: 11rem;
+        }
+
+
+
+        .wheel {
+            height: 2.4rem;
+            width: 2rem;
+            background: #232323;
+            position: absolute;
+            bottom: -2rem;
+            z-index: -1;
+            background-image: linear-gradient(to right, #000, #101010, #000);
+            border-radius: 7px;
+        }
+
+        .leftWheel {
+            left: 1rem;
+        }
+
+        .rightWheel {
+            right: 1rem;
+        }
+
+        .tierLine {
+            position: absolute;
+            bottom: 3px;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+
+        }
+
+        .tierLine1 {
+            animation: wheelRotation 0.2s linear infinite;
+        }
+
+        .tierLine2 {
+            animation: wheelRotation 0.2s linear 1s infinite;
+        }
+
+        .upperBody {
+            width: 100%;
+            height: 50%;
+            background: #EA650A;
+            position: absolute;
+            top: 1.5rem;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+            border-radius: 50%;
+
+        }
+
+        .rearMirror {
+            width: 80%;
+            height: 30%;
+            background: #b1e5e9;
+            position: absolute;
+            top: 2.2rem;
+            left: 1.5rem;
+            clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+            border-radius: 30%;
+        }
+
+        .carBackLight {
+            width: 2.5rem;
+            height: 2.5rem;
+            background-color: #B10807;
+            position: absolute;
+            top: 52%;
+            left: 0.4rem;
+            transform: rotate(17deg);
+        }
+
+        .carBoot {
+            width: 99%;
+            height: 50%;
+            background: #D45B0A;
+            border-radius: 15px;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .carBackLightLeft {
+            top: 52%;
+            left: 0.4rem;
+            transform: rotate(17deg);
+        }
+
+        .carBackLightRight {
+            top: 52%;
+            left: 12rem;
+            transform: rotate(346deg);
+        }
+
+        .carBackDoor {
+            clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%);
+            width: 70%;
+            height: 40%;
+            background: #a14507;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            position: absolute;
+            bottom: 1rem;
+            left: 2.1rem;
+        }
+
+        .carBackDoorBottom {
+            clip-path: polygon(0 0, 100% 0, 86% 100%, 14% 100%);
+            width: 100%;
+            height: 60%;
+            background: #7f3605;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .carBootBottom {
+            width: 99%;
+            height: 34%;
+            background: #b34c08;
+            border-radius: 15px;
+            position: absolute;
+            bottom: 0px;
+        }
+
     </style>
 </head>
 
@@ -187,7 +374,23 @@
     <section class="mountains">
         <div class="hill1 hills"></div>
         <div class="hill2 hills"></div>
-        <div class="car"></div>
+
+        <div class="car">
+            <section class="upperBody"></section>
+            <section class="rearMirror"></section>
+            <section class="carBackLight carBackLightLeft"></section>
+            <section class="carBackLight carBackLightRight"></section>
+            <section class="carBoot"></section>
+            <section class="carBootBottom"></section>
+            <div class="carBackDoor">
+                <div class="carBackDoorBottom"></div>
+
+            </div>
+            <section class="wheel leftWheel">
+            </section>
+            <section class="wheel rightWheel">
+            </section>
+        </div>
 
     </section>
     <section class="land">
@@ -196,11 +399,10 @@
         <section class="polLeft2 poll"></section>
         <section class="polLeft3 poll"></section>
         <section class="polLeft4 poll"></section>
-
         <section class="polRight1 poll"></section>
         <section class="polRight2 poll"></section>
         <section class="polRight3 poll"></section>
-        <section class="polRight4 poll"></section> 
+        <section class="polRight4 poll"></section>
         <div class="road">
 
             <div class="line">
@@ -208,7 +410,6 @@
                     <div class="centreLine">
                         <div class="whiteBlock1 roadBlocks"></div>
                         <div class="whiteBlock2 roadBlocks"></div>
-
                     </div>
                 </div>
             </div>
